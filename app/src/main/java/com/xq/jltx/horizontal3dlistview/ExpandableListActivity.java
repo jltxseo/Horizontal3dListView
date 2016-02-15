@@ -1,7 +1,7 @@
 package com.xq.jltx.horizontal3dlistview;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +17,7 @@ import it.sephiroth.android.library.widget.ExpandableHListView;
  *         Created by junlintianxia on 2016年02月15日.
  */
 
-public class ExpandableListActivity extends Activity
+public class ExpandableListActivity extends AppCompatActivity
         implements ExpandableHListView.OnGroupExpandListener, ExpandableHListView.OnGroupCollapseListener, ExpandableHListView.OnGroupClickListener, View.OnClickListener {
 
     private static final String LOG_TAG = ExpandableListActivity.class.getSimpleName();

@@ -1,11 +1,10 @@
 package com.xq.jltx.horizontal3dlistview;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.List;
  *         Created by junlintianxia on 2016年02月15日.
  */
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends AppCompatListActivity {
 
     @Override
     protected void onCreate( final Bundle savedInstanceState ) {
@@ -27,9 +26,22 @@ public class MainActivity extends ListActivity {
 
 
         setListAdapter( new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, activities ) );
+        getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                switch( position ) {
+                    case 0:
+                        startActivity( new Intent( MainActivity.this, SimpleHListActivity.class ) );
+                        break;
+                    case 1:
+                        startActivity( new Intent( MainActivity.this, ExpandableListActivity.class ) );
+                        break;
+                }
+            }
+        });
     }
 
-    @Override
+/*    @Override
     protected void onListItemClick(final ListView l, final View v, final int position, final long id ) {
 
         switch( position ) {
@@ -42,5 +54,5 @@ public class MainActivity extends ListActivity {
         }
 
         super.onListItemClick( l, v, position, id );
-    }
+    }*/
 }

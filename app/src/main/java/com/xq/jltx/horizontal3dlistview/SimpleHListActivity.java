@@ -1,10 +1,10 @@
 package com.xq.jltx.horizontal3dlistview;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.util.SparseArrayCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +29,7 @@ import it.sephiroth.android.library.widget.HListView;
  *         Created by junlintianxia on 2016年02月15日.
  */
 
-public class SimpleHListActivity extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener {
+public class SimpleHListActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     private static final String LOG_TAG = "SimpleHListActivity";
     H3DListView listView;
